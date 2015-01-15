@@ -5,7 +5,7 @@ public class ImQuadraticSolver {
 		double c = Double.parseDouble(args[2]);
 
 		if (a == 0) {
-			System.out.println("A = 0. Cannot solve equation.");
+			System.out.println(-c / b);
 		} else if (b * b - 4 * a * c > 0) {
 			System.out.println((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a));
 			System.out.println((-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
