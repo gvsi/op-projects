@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class CreditCard {
 	private int expiryMonth;
 	private int expiryYear;
@@ -26,8 +28,12 @@ public class CreditCard {
 	}
 	
 	public boolean isValid() {
-		// to implement
-		return true;
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+		int month = now.get(Calendar.MONTH) + 1;
+		
+		return expiryYear > year || (expiryYear == year && month < expiryMonth);
+		
 	}
 	
 	public String toString() {
@@ -35,7 +41,7 @@ public class CreditCard {
 	}
 	
 	public static void main(String[] args) {
-		CreditCard cc1 = new CreditCard(10, 2014, "Bob", "Jones", "1234567890123456");
+		CreditCard cc1 = new CreditCard(02, 2015, "Bob", "Jones", "1234567890123456");
 		System.out.println(cc1);
 	}
 }

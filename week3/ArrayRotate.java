@@ -3,7 +3,6 @@ public class ArrayRotate {
 		int[] nums = new int[args.length];
 		for (int i = 0; i < args.length; i++) {
 			nums[i] = Integer.parseInt(args[i]);
-
 		}
 
 		int [] copy = new int[nums.length];
@@ -17,6 +16,5 @@ public class ArrayRotate {
 			System.out.print(copy[i] + " ");
 		}
 		System.out.print("\n");
-		
 	}
 }
