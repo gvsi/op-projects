@@ -1,3 +1,4 @@
+package music;
 public class MusicTrack {
 	private String artist;
 	private String title;

@@ -1,7 +1,10 @@
+package music;
 import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import music.Favourites;
 
 import org.junit.After;
 import org.junit.Before;

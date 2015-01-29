@@ -1,4 +1,6 @@
+package music;
 import static org.junit.Assert.assertEquals;
+import music.MusicTrack;
 
 import org.junit.Test;
 

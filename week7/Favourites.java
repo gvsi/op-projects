@@ -1,26 +1,17 @@
+import java.util.ArrayList;
+
+import music.MusicTrack;
+
 public class Favourites {
-	MusicTrack[] favourites = new MusicTrack[5];
+	ArrayList<MusicTrack> favourites = new ArrayList<MusicTrack>();
 	
 	public void addTrack(String artist, String title) {
-		if (this.favourites[4] != null) {
-			System.out.println("Sorry, can't add: " + new MusicTrack(artist, title) + "\n");
-			return;
-		}
-		for (int i = 0; i < 5; i++) {
-			if (this.favourites[i] == null) {
-				this.favourites[i] = new MusicTrack(artist, title);
-				break;
-			}
-		}
+		favourites.add(new MusicTrack(artist, title));
 	}
 	
 	public void showFavourites() {
-		for (int i = 0; i < 5; i++) {
-			if (this.favourites[i] != null) {
-				System.out.println(this.favourites[i]);
-			} else {
-				break;
-			}
+		for (MusicTrack favourite : favourites) {
+			System.out.println(favourite);
 		}
 	}
 	
